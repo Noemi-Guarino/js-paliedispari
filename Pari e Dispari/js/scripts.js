@@ -2,11 +2,11 @@
  let choose = prompt("Fai una scelta tra numeri Pari o Dispari");
  console.log(choose);
 
-    x = false
+    pippo = false
 
- if (choose == "Pari") {
-    x = true;
-  }
+    if (choose == "Pari") {
+        pippo = true;
+    }
 
 // far scegliere all'utente un numero da 1 a 5
  let userNumber = parseInt(prompt("Scrivi un numero da 1 a 5"));
@@ -29,21 +29,30 @@ let pc = document.getElementById("pcchoose").innerHTML =
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.(se l'utente ha scelto pari e la somma dei due numeri è pari ha vinto l'utente sennò ha perso)
 
-
-
 let sum = userNumber + numeroRandompc;
 document.getElementById("sum").innerHTML = "la somma tra i due numeri è:" + sum;
 console.log("la somma tra i due numeri è:",sum);
 
+function isEven(sum) {
+    if (sum % 2 == 0) {
+        return true;
+    }else
+        return false;
+}
 
-// let = theWinner;
-//     function theWinner() {
-//         if ( choose == true && sum % 2 == 0) {
-//             return document.writeln('Hai vinto!'); 
-//         }else(choose == false && sum % 2 == 0)
-//             return document.writeln('Hai perso!'); 
-//         ;
-//     }
+console.log('Il risultato è :', isEven(sum));
+// let result = document.getElementById("result").innerHTML = 
+// "Il vincitore è : " + theWinner;
 
+let theWinner;
+
+    if ( choose == true && sum % 2 == 0) {
+        document.writeln('Hai vinto!'); 
+    }else if (choose == false && sum % 2 == 0){
+        document.writeln('Hai vinto!');
+    }else{
+        document.writeln('Hai perso!')
+    }
+    
 // let result = document.getElementById("result").innerHTML = 
 // "Il vincitore è : " + theWinner;
