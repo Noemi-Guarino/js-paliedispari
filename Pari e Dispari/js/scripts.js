@@ -2,15 +2,9 @@
  let choose = prompt("Fai una scelta tra numeri Pari o Dispari");
  console.log(choose);
 
-    pippo = false
-
-    if (choose == "Pari") {
-        pippo = true;
-    }
-
 // far scegliere all'utente un numero da 1 a 5
  let userNumber = parseInt(prompt("Scrivi un numero da 1 a 5"));
- console.log(userNumber);
+ console.log("Il numero del user è:", userNumber);
 
  let user = document.getElementById("userchoose").innerHTML = 
 "Hai scelto un numero: " + choose + "Il tuo numero è " + userNumber;
@@ -44,14 +38,14 @@ console.log('Il risultato è :', isEven(sum));
 // let result = document.getElementById("result").innerHTML = 
 // "Il vincitore è : " + theWinner;
 
-let theWinner;
+// let theWinner;
 
-    if ( choose == true && sum % 2 == 0) {
+    if (choose == (sum % 2 == 0)) {
         document.writeln('Hai vinto!'); 
-    }else if (choose == false && sum % 2 == 0){
+    }else if (choose == (sum % 2 != 0)){
         document.writeln('Hai vinto!');
     }else{
-        document.writeln('Hai perso!')
+        document.writeln('Hai perso!'); 
     }
     
 // let result = document.getElementById("result").innerHTML = 
