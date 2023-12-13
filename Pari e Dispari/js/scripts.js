@@ -35,18 +35,23 @@ function isEven(sum) {
 }
 
 console.log('Il risultato è :', isEven(sum));
-// let result = document.getElementById("result").innerHTML = 
-// "Il vincitore è : " + theWinner;
 
 // let theWinner;
 
-    if (choose == (sum % 2 == 0)) {
+    // if (choose == (sum % 2 == 0)) {
+    //     document.writeln('Hai vinto!'); 
+    // }else if (choose == (sum % 2 != 0)){
+    //     document.writeln('Hai vinto!');
+    // }else{
+    //     document.writeln('Hai perso!'); 
+    // }
+    
+    if ( isEven(sum) && choose == 'pari') {
         document.writeln('Hai vinto!'); 
-    }else if (choose == (sum % 2 != 0)){
+    }else if (!isEven(sum) && choose == 'dispari'){
         document.writeln('Hai vinto!');
     }else{
         document.writeln('Hai perso!'); 
     }
-    
-// let result = document.getElementById("result").innerHTML = 
-// "Il vincitore è : " + theWinner;
+
+
